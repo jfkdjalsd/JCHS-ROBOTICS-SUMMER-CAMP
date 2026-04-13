@@ -3,282 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JCHS Robotics Summer Camp Poster</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
-        }
-        
-        .poster {
-            width: 100%;
-            max-width: 800px;
-            background: linear-gradient(180deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-            text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .poster::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 400px;
-            height: 400px;
-            background: rgba(102, 126, 234, 0.1);
-            border-radius: 50%;
-            z-index: 0;
-        }
-        
-        .poster::after {
-            content: '';
-            position: absolute;
-            bottom: -30%;
-            left: -10%;
-            width: 300px;
-            height: 300px;
-            background: rgba(118, 75, 162, 0.1);
-            border-radius: 50%;
-            z-index: 0;
-        }
-        
-        .content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .header {
-            margin-bottom: 30px;
-        }
-        
-        .camp-name {
-            font-size: 48px;
-            font-weight: bold;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        
-        .school {
-            font-size: 28px;
-            color: #667eea;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-        
-        .tagline {
-            font-size: 20px;
-            color: #aaa;
-            font-style: italic;
-            margin-bottom: 30px;
-        }
-        
-        .price-section {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            padding: 25px;
-            border-radius: 15px;
-            margin: 30px 0;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-        }
-        
-        .price {
-            font-size: 56px;
-            font-weight: bold;
-            color: white;
-            margin-bottom: 10px;
-        }
-        
-        .price-desc {
-            font-size: 18px;
-            color: rgba(255, 255, 255, 0.9);
-        }
-        
-        .features {
-            margin: 40px 0;
-            text-align: left;
-        }
-        
-        .features-title {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #667eea;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-        
-        @media (max-width: 600px) {
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .feature-item {
-            background: rgba(102, 126, 234, 0.15);
-            padding: 15px;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
-            text-align: left;
-        }
-        
-        .feature-item strong {
-            color: #667eea;
-            display: block;
-            margin-bottom: 5px;
-        }
-        
-        .feature-item span {
-            font-size: 14px;
-            color: #ccc;
-        }
-        
-        .vex-highlight {
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 165, 0, 0.2));
-            padding: 20px;
-            border-radius: 10px;
-            margin: 25px 0;
-            border: 2px solid #ffd700;
-        }
-        
-        .vex-highlight h3 {
-            color: #ffd700;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        
-        .vex-highlight p {
-            font-size: 16px;
-            color: #fff;
-        }
-        
-        .cta-section {
-            margin: 40px 0 0 0;
-            padding-top: 30px;
-            border-top: 2px solid rgba(102, 126, 234, 0.5);
-        }
-        
-        .cta-button {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 15px 40px;
-            font-size: 18px;
-            font-weight: bold;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            margin: 10px;
-            display: inline-block;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
-        }
-        
-        .details {
-            margin-top: 30px;
-            font-size: 14px;
-            color: #aaa;
-            line-height: 1.8;
-        }
-        
-        .emoji {
-            font-size: 24px;
-            margin-right: 8px;
-        }
-    </style>
+    <title>JCHS Robotics Summer Camp</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="poster">
-        <div class="content">
-            <div class="header">
-                <div class="camp-name">🤖 Summer Camp 2026</div>
-                <div class="school">John Champe Robotics</div>
-                <div class="tagline">"Build. Learn. Innovate."</div>
+    <div class="container">
+        <header>
+            <h1>Welcome to the JCHS Robotics Summer Camp</h1>
+            <div class="robot-icon"></div>
+        </header>
+        <section class="what-youll-build">
+            <h2>What You'll Build</h2>
+            <p>You will build various projects using the VEX 5 robotics platform, including robots designed for specific tasks, automated systems, and competitive entries.</p>
+        </section>
+        <section class="core-learning-areas">
+            <h2>Core Learning Areas</h2>
+            <div class="feature-boxes">
+                <div class="feature-box">Mechanical Design</div>
+                <div class="feature-box">Coding Skills</div>
+                <div class="feature-box">Competition Preparation</div>
+                <div class="feature-box">Teamwork Collaboration</div>
+                <div class="feature-box">Problem Solving</div>
+                <div class="feature-box">Innovation</div>
             </div>
-            
-            <div class="price-section">
-                <div class="price">$175</div>
-                <div class="price-desc">2 Weeks of Robotics Excellence</div>
-            </div>
-            
-            <div class="features">
-                <div class="features-title">✨ What You'll Learn</div>
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <strong><span class="emoji">🎮</span>VEX Robotics 5</strong>
-                        <span>Master the latest VEX 5 platform and cutting-edge robotics technology</span>
-                    </div>
-                    <div class="feature-item">
-                        <strong><span class="emoji">⚙️</span>Mechanical Design</strong>
-                        <span>Learn how to build and optimize mechanical systems for maximum performance</span>
-                    </div>
-                    <div class="feature-item">
-                        <strong><span class="emoji">💻</span>Programming & Coding</strong>
-                        <span>Develop real coding skills using industry-standard robotics software</span>
-                    </div>
-                    <div class="feature-item">
-                        <strong><span class="emoji">🏆</span>Competition Ready</strong>
-                        <span>Prepare for VEX competitions and gain practical engineering experience</span>
-                    </div>
-                    <div class="feature-item">
-                        <strong><span class="emoji">👥</span>Teamwork & Collaboration</strong>
-                        <span>Work with peers to solve complex engineering challenges together</span>
-                    </div>
-                    <div class="feature-item">
-                        <strong><span class="emoji">🧠</span>Problem Solving</strong>
-                        <span>Develop critical thinking and creative solutions for real-world problems</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="vex-highlight">
-                <h3>🌟 VEX ROBOTICS 5 PLATFORM</h3>
-                <p>Get hands-on experience with VEX 5 robotics systems, the industry-leading platform trusted by teams worldwide. Build, program, and compete!</p>
-            </div>
-            
-            <div class="cta-section">
-                <h3 style="margin-bottom: 15px; color: #667eea;">Ready to Build Something Amazing?</h3>
-                <button class="cta-button">Sign Up Now</button>
-                <button class="cta-button" style="background: rgba(102, 126, 234, 0.3); border: 2px solid #667eea;">Learn More</button>
-                
-                <div class="details">
-                    <p><strong>📅 Duration:</strong> 2 Weeks (Full Summer Experience)</p>
-                    <p><strong>💰 Cost:</strong> $175 for the entire 2-week program</p>
-                    <p><strong>🏫 Location:</strong> John Champe High School</p>
-                    <p><strong>👨‍🏫 Instructors:</strong> Experienced JCHS Robotics Team Members</p>
-                    <p><strong>🎯 Perfect For:</strong> Beginners to Intermediate Students (Ages 13-18)</p>
-                    <p style="margin-top: 15px; font-style: italic;">Limited spots available! Enroll today and join the robotics revolution.</p>
-                </div>
-            </div>
-        </div>
+        </section>
+        <section class="camp-details">
+            <h2>Camp Details</h2>
+            <p><strong>Duration:</strong> 2 weeks</p>
+            <p><strong>Schedule:</strong> June 5 - June 19, 2026; Monday to Friday, 9 AM - 3 PM</p>
+            <p><strong>Location:</strong> JCHS Robotics Lab</p>
+            <p><strong>Age:</strong> 10 - 16 years old</p>
+        </section>
     </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
